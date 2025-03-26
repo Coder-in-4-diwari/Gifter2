@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Gradient Background -->
+    <TextView
+        android:id="@+id/GiftItemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:text="GIFT ITEMS"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle=""
+        android:background="@drawable/gradient_background"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:fontFamily="@font/inriasans_bold"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- RecyclerView for Flowers -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerGiftItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"/>
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center">
+
+    <!-- Item Image Container -->
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp">
+
+        <!-- Flower Image with Rounded Corners -->
+        <ImageView
+            android:id="@+id/flowerImage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_background"
+            android:src="@drawable/ic_flowers"
+            android:clipToOutline="true"
+            android:cropToPadding="true"
+            android:contentDescription="Flowers"/>
+
+        <!-- Price Tag -->
+        <TextView
+            android:id="@+id/flowerPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/price_tag_background"
+            android:text="₹50"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <!-- Flower Name -->
+    <TextView
+        android:id="@+id/flowerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rose"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        android:textColor="#000000"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/instrumentserif"/>
+
+    <!-- Add to Cart Button -->
+    <Button
+        android:id="@+id/btnAddToCart"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Add to Cart"
+        android:background="@drawable/add_to_cart_background"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF5151"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:textSize="11sp"
+        android:fontFamily="@font/inter_semibold"/>
+
+    <!-- Quantity Selector Layout (Initially Hidden) -->
+    <LinearLayout
+        android:id="@+id/quantityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <!-- Minus Button -->
+        <ImageButton
+            android:id="@+id/btnMinus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/rounded_square"
+            android:backgroundTint="@color/gray"
+            android:src="@drawable/ic_minus"
+            android:scaleType="centerInside"
+            android:padding="8dp"/>
+
+        <!-- Quantity Display -->
+        <TextView
+            android:id="@+id/tvQuantity"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:background="@drawable/rounded_rectangle"
+            android:text="1"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="4dp"/>
+
+        <!-- Plus Button -->
+        <ImageButton
+            android:id="@+id/btnPlus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/gray"
+            android:background="@drawable/rounded_square"
+            android:src="@drawable/ic_add"
+            android:scaleType="centerInside"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>

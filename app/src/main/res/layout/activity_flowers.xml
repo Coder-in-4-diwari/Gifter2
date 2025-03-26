@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Gradient Background -->
+    <TextView
+        android:id="@+id/flowersTitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="FLOWERS"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:background="@drawable/gradient_background"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:fontFamily="@font/inriasans_bold"/>
+
+    <!-- Flowers RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/flowersRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        app:spanCount="2"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+</LinearLayout>
